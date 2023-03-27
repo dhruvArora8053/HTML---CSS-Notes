@@ -270,7 +270,7 @@ nav p {
   float: left;
   margin-bottom: 20px;
 }
-/* and with this what is going to happen is that this image is basically going be take out of the document flow just like an absolutely positioned element, now the difference here with floats is that then all the other elements will basically float around it */
+/* and with this what is going to happen is that this image is basically going be taken out of the document flow just like an absolutely positioned element, now the difference here with floats is that then all the other elements will basically float around it */
 
 .author {
   /* padding-left: 80px; */
