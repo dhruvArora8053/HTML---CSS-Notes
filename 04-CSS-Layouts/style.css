@@ -2,6 +2,7 @@
   /* border-top: 10px solid #1098ad; */
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* PAGE SECTIONS */
@@ -334,16 +335,17 @@ aside {
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
   padding: 40px 40px;
-  
-  /* by adding 40px of padding for left and right is a little big for the conatainer to hold and it is overlapping the article tag so to stop that aside element got shifted down
+
+  /* by adding 40px of padding for left and right is a little big for the conatainer to hold and it is overlapping the article element so to stop that: aside element got shifted down
   totalWidth= articleWidth+paddingLeft+paddingRight
   totalWidth=300px+40px+40px
   totalWidth=380px: according to default behavior of box model sizing */
 }
 
 /* To solve this now we use the other way of Box-Sizing */
-aside{
+aside {
   box-sizing: border-box;
   /* Given width: 300px
-  now it will adjust it's content width according to padding and margins and it will no go over 300px */
+  now it will adjust it's content width according to padding and borders and it will no go over 300px which means paddings and borders width will stay under 300px */
+  /* Note:- this property does not get inherited through the parent element so always give it to the universal selector */
 }
