@@ -313,19 +313,19 @@ nav {
 }
 
 /* 49-Building a simple float layout */
-article{
+article {
   /* background-color: green; */
   width: 825px;
   float: left;
 }
 
-aside{
+aside {
   /* background-color: red; */
   width: 300px;
   float: right;
 }
 
-footer{
+footer {
   /* background-color: yellow; */
   clear: both;
 }
