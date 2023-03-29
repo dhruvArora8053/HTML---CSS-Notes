@@ -346,7 +346,7 @@ aside {
 aside {
   box-sizing: border-box;
   /* Given width: 300px
-  now it will adjust it's content width according to padding and borders and it will no go over 300px which means paddings and borders width will stay under 300px */
+  now it will adjust it's content width according to padding and borders and it will not go over 300px which means paddings and borders width will stay under 300px */
   /* Note:- this property does not get inherited through the parent element so always give it to the universal selector */
 }
 
