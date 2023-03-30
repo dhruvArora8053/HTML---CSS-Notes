@@ -73,6 +73,32 @@
       .el--5 {
         align-self: stretch;
       }
+
+      .el--6 {
+        order: -1;
+      }
+      /* At the start all the elements are at zero order so by giving -1 to el--6 it has become the first element on the flex */
+
+      .el--5 {
+        order: 1;
+        /* now it will become the last one */
+      }
+      /* 
+      .el--1{
+        order: 2;
+        now it will become the last one
+      }  */
+
+      /* Manually creating space between elements */
+      /* .el{
+        margin-right: 30px;
+      } */
+      /* however inorder to get this right we would then have to go in and remove the margin right from the very last element which can be a bit of a pain and also it's a way nicer to have the definition of a gap between these elements right here in the container  */
+
+      .container {
+        gap: 30px;
+      }
+      /* so we are back having the same gap basically but now it is nicely in the flex container and also if we inspect this we see that none of them has any margins and so there's no need to then remove the margin from the last element there */
     </style>
   </head>
   <body>
