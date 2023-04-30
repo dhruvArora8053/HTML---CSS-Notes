@@ -96,20 +96,60 @@
       /* however inorder to get this right we would then have to go in and remove the margin right from the very last element which can be a bit of a pain and also it's a way nicer to have the definition of a gap between these elements right here in the container  */
 
       .container {
-        gap: 30px;
+        /* gap: 30px; */
       }
       /* so we are back having the same gap basically but now it is nicely in the flex container and also if we inspect this we see that none of them has any margins and so there's no need to then remove the margin from the last element there */
 
       .el {
-        /* Defaults
+        /*Flex Default Properties
         flex-grow: 0;
         flex-shrink: 1;
         flex-basis: auto;
          */
 
-        /* When we want to size flex items, and in particular with a width, then we usually do not use the width property but instead we use flex basis */
+        /* flex-basis:
+         When we want to size flex items, and in particular with a width, then we usually do not use the width property but instead we use flex basis */
         /* Let's say we want these elements to have a width of 100 pixels: */
+        flex-basis: 100px;
+        /* and now what happened here is that now some of container elements do acutally have a width of 100px but when the content is larger than 100px then the element actually extends to fit that content */
+        /* amazing is 151px and languages is even bigger at almost 184px so what this means is that flex-basis is not really rigid so it's more like a recommendation that we make to the browser but browser will then based on the content figure out the optimal length */
       }
+
+      /* let's make flex basis really big */
+      .el {
+        /* flex-basis: 300px; */
+        /* you see now all of these elements are now 252px wide and so that's nowhere near 300px and the reason for that is by default flexbox is allowed to shrink element so that they fit the container and so that's what the flex-shrink above set to 1 actually means so again if there is not enough space in a container to fit the items with the size that we describe here using flex-basis then flexbox is allowed to shrink these items by default because flex-shrink is set to 1 however, if we want to change that: */
+        flex-shrink: 0;
+        /* and now you see that all the elements are indeed 300px wide but then ofcourse the content no longer fits the container so setting flex shrinkg to zero is not always advisable but in some situation it's necessary. So essentially what flex shrink does is to determine whether flexbox is allowed to shrink element if necessary or not and finally there's basically opposite of that: */
+
+        /* flex-grow, it determines whether elements are allowed to grow as large as they can or not: */
+        /* flex-grow: 1; */
+        /* and now you see that all of them have exactly the same size of 254px and intotal they filled up the entire flex container and so that's exactly what the flex-grow set to 1 is doing and if we turned-off this property then each of the elements would simply be back to occupying that they need to fit the content. But what would happen if we only set this property for a single element:   */
+      }
+
+      .el--1 {
+        /* flex-grow: 1; */
+      }
+      /* first we had flex-grow set to 1 for all of the elements but when we set it for only one element, now only the el--1 here was allowed to fill up all the remaining space and so other are still with the size of the content and then the remaining space was filled up by el--1 */
+
+      /* once again setting up flex-grow to 1 */
+      .el {
+        flex-grow: 1;
+        /* and the value wouldn't have to be 1 what matters is that they are the same number so all of them would be 5 then they would still have the same size but now if one of the was 2: */
+      }
+
+      .el--1 {
+        flex-grow: 2;
+        /* now this one here would get double of the remaining space than these other ones and having the value here double compare to fles-grow of other ones doesn't mean that this el--1 will get double the size, what it does mean is that it gets double of the available empty space than from these other ones*/
+        /* for ex:
+         empty space = 600px
+         total el = 5
+         4 el = 100px
+         1 el = 200px
+         */
+         /* and if we set el--1 flex-grow to 3 then it would get even bigger portion of the remaining space */
+      }
+
     </style>
   </head>
   <body>
