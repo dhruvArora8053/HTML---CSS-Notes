@@ -339,7 +339,7 @@ aside {
   /* by adding 40px of padding for left and right is a little big for the container to hold and it is overlapping the article element so to stop that: aside element got shifted down
   totalWidth= articleWidth+paddingLeft+paddingRight
   totalWidth=300px+40px+40px
-  totalWidth=380px: according to default behavior of box model sizing */
+  totalWidth=380px: according to default behavior(content-box) of box model sizing */
 }
 
 /* To solve this now we use the other way of Box-Sizing */
@@ -347,6 +347,8 @@ aside {
   box-sizing: border-box;
   /* Given width: 300px
   now it will adjust it's content width according to padding and borders and it will not go over 300px which means paddings and borders width will stay under 300px but it will manipulate the positioning of inner content */
+  /* Now totalWidth=220px+40px+40px
+  totalWidth=300px: */
   /* Note:- this property does not get inherited through the parent element so always give it to the universal selector */
 }
 
