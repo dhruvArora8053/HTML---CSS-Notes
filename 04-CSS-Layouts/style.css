@@ -196,7 +196,7 @@ nav a:link {
   display: block; */
 
   margin-right: 30px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
   display: inline-block;
 }
 
@@ -266,4 +266,16 @@ nav p {
 } */
 
 /* Using Flexbox */
+.main-header {
+  /* background-color: red; */
+  display: flex;
 
+  /* remove margin-top for nav anchor above */
+
+  align-items: center;
+  /* aligned items to center vertically */
+
+  /* pushing nav a links to right */
+  justify-content: space-between;
+  /* so this will take all the empty space and divide that as a space between them and in case we only have two elements then that means all the reamining space will stay between the botht of the flex items and as a consequence of that each got pushed to the side */
+}
