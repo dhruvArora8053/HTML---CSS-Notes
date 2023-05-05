@@ -279,3 +279,44 @@ nav p {
   justify-content: space-between;
   /* so this will take all the empty space and divide that as a space between them and in case we only have two elements then that means all the reamining space will stay between the botht of the flex items and as a consequence of that each got pushed to the side */
 }
+
+.author-box {
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
+  margin-bottom: 15px;
+}
+
+/* remove margin-bottom from author p element */
+.author {
+  margin-bottom: 0;
+  margin-left: 15px;
+}
+
+/* Using flex on aside */
+.related-post {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* removing margin-bottom from the paragraphs */
+.related-author {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: italic;
+}
+
+.related-link:link {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+
+  /* margin-bottom: 5px; */
+  /* this property did not work, because anchors are inline element  */
+  /* to fix it: */
+  display: inline-block;
+  margin-bottom: 5px;
+}
