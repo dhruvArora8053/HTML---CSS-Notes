@@ -265,12 +265,13 @@ nav p {
   font-size: 18px;
 } */
 
+/* 
 .author-img {
   float: left;
   margin-bottom: 20px;
-}
+} */
 /* and with this what is going to happen is that this image is basically going be taken out of the document flow just like an absolutely positioned element, now the difference here with floats is that then all the other elements will basically float around it */
-
+/* 
 .author {
   /* padding-left: 500px; */
   /* how can we fix the fact that the author p element basically starts right at the beginning of container so behind the image? */
@@ -279,19 +280,19 @@ nav p {
   margin-top: 10px;
   margin-left: 20px;
   /* now the element starts right after the floated image, we could also set it to right here and then it would move all the way to the right side of the container */
-}
+} */
 /* so here we can very clearly see that the element itself actually does not start right here where text is but it does infact start right behind the image  */
 
 /* so here we could confirm again that this image has been taken completely out of the page's flow, it is as if the image isn't even on the page, it really does not affect the surrounding elements */
 
 /* Goal: to have h1 and nav to float on the same side */
-h1 {
+/* h1 {
   float: left;
 }
 
 nav {
   float: right;
-}
+} */
 /* and so now what we can see here is that the header element kind of lost its height so it looks very wierd infact the only reason why it is still visible is because we have some padding here so if we remove the padding then this element would disappear completely so atleast the background color behind it so why is this happening? */
 /* Well, the reason is that all of it's child elements which are in this case only two so the header only has two child elements the h1 and the nav and right now all of them are floated this means that it's as if these elements would not even be on the page so as if they had been removed and so now the element basically has no content anymore and so that way it makes sense that it's height is actually zero. So again, the height is now as if it was zero, the only remaining space that is remaining because of the padding.  */
 /* So this phenomena is what we call the collapsing elements and when this happens we say that the elements height has collapsed and this again happened because both of it's children are now floated so it's as if they were not on the page anymore */
@@ -305,32 +306,32 @@ nav {
   clear: both;
 } */
 
-.clearfix::after {
+/* .clearfix::after {
   clear: both;
   content: "";
   display: block;
-}
+} */
 
 /* 49-Building a simple float layout */
-article {
+/* article {
   /* background-color: green; */
   width: 825px;
   float: left;
-}
-
+} */
+/* 
 aside {
   /* background-color: red; */
   width: 300px;
   float: right;
-}
-
+} */
+/* 
 footer {
   /* background-color: yellow; */
   clear: both;
-}
+} */
 
 /* 50-Box-sizing, Border-Box:- */
-aside {
+/* aside {
   background-color: #f7f7f7;
   border-top: 5px solid #1098ad;
   border-bottom: 5px solid #1098ad;
@@ -340,20 +341,21 @@ aside {
   totalWidth= articleWidth+paddingLeft+paddingRight
   totalWidth=300px+40px+40px
   totalWidth=380px: according to default behavior(content-box) of box model sizing */
-}
+} */
 
 /* To solve this now we use the other way of Box-Sizing */
-aside {
+/* aside {
   box-sizing: border-box;
   /* Given width: 300px
   now it will adjust it's content width according to padding and borders and it will not go over 300px which means paddings and borders width will stay under 300px but it will manipulate the positioning of inner content */
   /* Now totalWidth=220px+40px+40px
   totalWidth=300px: */
   /* Note:- this property does not get inherited through the parent element so always give it to the universal selector */
-}
+} */
 
-h4 {
+/* h4 {
   margin-bottom: 30px;
-}
+} */
+
 
 /* 52-Intro to Flexbox:- */

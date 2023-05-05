@@ -147,9 +147,20 @@
          4 el = 100px
          1 el = 200px
          */
-         /* and if we set el--1 flex-grow to 3 then it would get even bigger portion of the remaining space */
+        /* and if we set el--1 flex-grow to 3 then it would get even bigger portion of the remaining space */
       }
 
+      .el {
+        flex-shrink: 0;
+        flex-grow: 1;
+        gap: 10px;
+      }
+
+      .el {
+        flex: 1;
+        /* usaully we never never declare these 3 properties individually we always use flex property :
+         flex: flex-grow flex-shrink flex-basis   */
+      }
     </style>
   </head>
   <body>
