@@ -328,6 +328,12 @@ nav p {
 }
 
 aside {
+  /*Flex Default Properties
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+         */
+
   /* flex-basis: 300px; */
   /* so this didn't work so we need to set flex-shrink to zero and let's use for this flex shorthand: */
   flex: 0 0 300px;
@@ -345,16 +351,16 @@ article {
   /* now having to all this math kind of defeats the purpose of using flexbox in the first place and so maybe we just want the aside to be really 300px but then the article maybe we can allow flexbox to automatically figure out it's size so what we usually do in a situation like this is to simply set flex to 1 which will then automatically allow this element to grow as much as it can in the available space:  */
   flex: 1;
   /* so our article now exactly the same as previous with a width 9f 825px */
-margin-bottom: 0;
+  margin-bottom: 0;
 }
 
-.row{
+.row {
   margin-bottom: 60px;
 }
 
 /* Now let's thing why actually this aside grew all the way until the bottom?
 Well the reason is that remember how the default vaue for a align-items is stretched so basically if don't define align-items then automatically all the elements will stretch as far as they can and in this case the largest element is aside, so let's fix this: */
-.row{
+.row {
   align-items: flex-start;
   /* now it's back to only occupying vertically the space that is necessary without growing as much as it can */
 }
