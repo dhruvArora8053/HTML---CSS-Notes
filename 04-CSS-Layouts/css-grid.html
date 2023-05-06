@@ -41,20 +41,42 @@
 
         /* CSS GRID */
         display: grid;
-        grid-template-columns: 250px 250px 150px 150px;
-        /* it will generate n px of columns */
+        /* grid-template-columns: 250px 250px 1fr 1fr; */
+        /* grid-template-columns: 1fr 1fr ; */
+
+        /* it will generate n no. of columns */
+        /* grid-template-columns: 1fr 1fr 1fr 1fr; */
+        /* here fr means adjusting the element to fill-up the reamining space, so in this grid container there is basically initially all of this empty space here from left side to right side and then as we use the fr unit then all of that empty space will get divided up equally between these four columns and i.e. each of them has value of 1, now let's now manipulate values:  */
+        /* grid-template-columns: 3fr 1fr 1fr 1fr; */
+        /* now the first column takes double the empty space:
+        total fractions= 6
+        1st column = 3 fractions(half space)
+        rest 3(half space left) = 1 fraction(each) */
+
+        /* grid-template-columns: 1fr 1fr 1fr auto; */
+        /* auto means that it will only take exactly the size that is necessary to fill it's content */
+
+        grid-template-columns: repeat(4, 1fr);
 
         /* Note:- elements will strrecth their height relative to the talles element which is green one in this case, and width that we define in grid-template-columns */
 
-        grid-template-rows: 300px 200px;
+        /* grid-template-rows: 300px 200px; */
         /* and now the green one here which has the defined height of 150px didn't stretch across the entire cell while the other grid items fill the entire cell  */
 
+        /* grid-template-rows: 1fr 1fr; */
+        /* took height from the green one both rows, if green height set to 0 then it will take height of the tallest element which is in this case languages */
+
+        /* grid-template-rows: 1fr 1fr; */
+        /* grid-template-rows: 1fr auto; */
+        grid-template-rows: 1fr 1fr;
+        height: 500px;
+
         /* gap:30px ; */
-         /*grid-gap===gap and
+        /*grid-gap===gap and
          margin doesn't work in css grid */
 
-         column-gap: 30px;
-         row-gap: 60px;
+        column-gap: 30px;
+        row-gap: 60px;
       }
 
       .container--2 {
