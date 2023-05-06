@@ -27,7 +27,7 @@ body {
   padding-left: 40px;
   padding-right: 40px; */
   padding: 20px 40px;
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
   /* height: 80px; */
 }
 
@@ -37,7 +37,7 @@ nav {
 }
 
 article {
-  margin-bottom: 60px;
+  /* margin-bottom: 60px; */
 }
 
 .post-header {
@@ -277,7 +277,6 @@ nav p {
 
   /* pushing nav a links to right */
   justify-content: space-between;
-  /* so this will take all the empty space and divide that as a space between them and in case we only have two elements then that means all the reamining space will stay between the botht of the flex items and as a consequence of that each got pushed to the side */
 }
 
 .author-box {
@@ -313,54 +312,31 @@ nav p {
   font-size: 17px;
   font-weight: bold;
   font-style: normal;
-
-  /* margin-bottom: 5px; */
-  /* this property did not work, because anchors are inline element  */
-  /* to fix it: */
   display: inline-block;
   margin-bottom: 5px;
 }
 
-/* building a flexbox layout */
-.row {
-  display: flex;
-  gap: 75px;
+/* CSS GRID LAYOUT: */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  column-gap: 75px;
+  row-gap: 60px;
+  align-items: start;
+}
+
+.main-header {
+  /* grid-column: 1/span 2; */
+  grid-column: 1/-1;
+}
+
+article {
 }
 
 aside {
-  /*Flex Default Properties
-        flex-grow: 0;
-        flex-shrink: 1;
-        flex-basis: auto;
-         */
-
-  /* flex-basis: 300px; */
-  /* so this didn't work so we need to set flex-shrink to zero and let's use for this flex shorthand: */
-  flex: 0 0 300px;
-  /* and indeed now we have aside witht width 300px */
 }
 
-/* aside= 300px
-article= 825px
-space between= 75px
-total= 1200px
-container= 1200px */
-
-article {
-  /* flex: 0 0 825px; */
-  /* now having to all this math kind of defeats the purpose of using flexbox in the first place and so maybe we just want the aside to be really 300px but then the article maybe we can allow flexbox to automatically figure out it's size so what we usually do in a situation like this is to simply set flex to 1 which will then automatically allow this element to grow as much as it can in the available space:  */
-  flex: 1;
-  /* so our article now exactly the same as previous with a width 9f 825px */
-  margin-bottom: 0;
-}
-
-.row {
-  margin-bottom: 60px;
-}
-
-/* Now let's thing why actually this aside grew all the way until the bottom?
-Well the reason is that remember how the default vaue for a align-items is stretched so basically if don't define align-items then automatically all the elements will stretch as far as they can and in this case the largest element is aside, so let's fix this: */
-.row {
-  align-items: flex-start;
-  /* now it's back to only occupying vertically the space that is necessary without growing as much as it can */
+footer {
+  /* background-color: red; */
+  grid-column: 1/-1;
 }
