@@ -40,6 +40,21 @@
         margin: 40px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 250px 250px 150px 150px;
+        /* it will generate n px of columns */
+
+        /* Note:- elements will strrecth their height relative to the talles element which is green one in this case, and width that we define in grid-template-columns */
+
+        grid-template-rows: 300px 200px;
+        /* and now the green one here which has the defined height of 150px didn't stretch across the entire cell while the other grid items fill the entire cell  */
+
+        /* gap:30px ; */
+         /*grid-gap===gap and
+         margin doesn't work in css grid */
+
+         column-gap: 30px;
+         row-gap: 60px;
       }
 
       .container--2 {
