@@ -55,6 +55,15 @@
         display: none;
       }
 
+      .el--6 {
+        /* grid-column: 4; */
+        /* grid-row: 1; */
+        /* grid-column: 1/-1; */
+        /* grid-row: 1/-1; */
+        /* grid-row: 2/5;
+        grid-column: 3; */
+      }
+
       .container--2 {
         /* display: none; */
         /* STARTER */
@@ -67,6 +76,22 @@
         height: 600px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 125px 200px 125px;
+        grid-template-rows: 250px 100px;
+        gap: 50px;
+
+        justify-content: center;
+        align-content: center;
+/* align-content: space-between;
+align-content: end; */
+
+
+      }
+
+      .el--3{
+        align-self: end;
+        /* justify-self: end; */
       }
     </style>
   </head>
