@@ -63,6 +63,7 @@ h2 {
   font-weight: 500;
   display: inline-block;
   /* margin-top: 100px; */
+  border-radius: 100px;
 }
 
 .btn:hover,
@@ -77,6 +78,10 @@ h2 {
 .btn--small {
   font-size: 14px;
   padding: 8px 12px;
+}
+
+img{
+  border-radius: 12px;
 }
 /* ------------------------ */
 /* COMPONENT STYLES */
@@ -147,6 +152,7 @@ img {
   background-color: #087f5b;
   color: white;
   padding: 24px;
+  border-radius: 12px;
 }
 
 .testimonial-box {
@@ -180,6 +186,13 @@ img {
   2. vertical
   3. blurriness 
   4. scale*/
+
+  border-radius: 12px;
+}
+
+.chair img{
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 .chair-box {
