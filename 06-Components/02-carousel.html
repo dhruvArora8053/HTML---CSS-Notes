@@ -42,17 +42,18 @@ GREY COLOR: #343a40 */
         margin: 100px auto;
         border-radius: 8px;
         padding: 32px;
-padding-left: 86px;
+        padding-left: 86px;
         display: flex;
         align-items: center;
         gap: 86px;
+        position: relative;
       }
 
       img {
         height: 200px;
         border-radius: 8px;
         transform: scale(1.5);
-        box-shadow: 0 12px 24px rgba(0,0, 0 ,0.25);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.25);
       }
 
       .testimonial-text {
@@ -71,6 +72,37 @@ padding-left: 86px;
         font-size: 12px;
         color: #c3fae8;
       }
+
+      /* CONTROLS */
+      .btn {
+        background-color: #fff;
+        border: none;
+        height: 40px;
+        width: 40px;
+
+        /* basically the width property is not being respected as the fact that these buttons are right now flex items and so remember the width works a little bit different here so right now the browser is trying to fit all this content here into the flex container and so automatically shrink these buttons here  */
+        position: absolute;
+        border-radius: 50%;
+
+        /* because .btn-icon are the child element of .btn */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+.btn--left{
+  left: 0;
+}
+
+.btn--right{
+  right: 0;
+}
+
+      .btn-icon {
+        height: 24px;
+        width: 24px;
+        stroke: #087f5b;
+      }
     </style>
   </head>
   <body>
@@ -85,7 +117,7 @@ padding-left: 86px;
         <p class="testimonial-author">Almeida</p>
         <p class="testimonial-job">Senior Product Manager at EDP Comercial</p>
       </blockquote>
-      <button class="btn">
+      <button class="btn btn--left">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -101,7 +133,7 @@ padding-left: 86px;
           />
         </svg>
       </button>
-      <button class="btn">
+      <button class="btn btn--right">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
