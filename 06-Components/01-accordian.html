@@ -43,6 +43,11 @@ GREY COLOR: #343a40 */
       }
 
       .item {
+        box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+        padding: 24px;
+
+        display: grid;
+        grid-template-columns: auto 1fr auto;
       }
 
       .number,
@@ -62,6 +67,7 @@ GREY COLOR: #343a40 */
       }
 
       .hidden-box {
+        grid-column: 2;
       }
 
       .hidden-box p {
@@ -79,34 +85,28 @@ GREY COLOR: #343a40 */
         /* so this process is much better than giving margin bottoms */
         /* align-items: center; */
       }
-
-      .container {
-        display: flex;
-        gap: 10px;
-      }
     </style>
   </head>
   <body>
     <div class="accordion">
       <div class="item">
-        <div class="container">
-          <p class="number flexing">02</p>
-          <p class="text flexing">How long do I have to return my chair?</p>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="icon flexing"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-            />
-          </svg>
-        </div>
+        <p class="number flexing">02</p>
+        <p class="text flexing">How long do I have to return my chair?</p>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="icon flexing"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+          />
+        </svg>
+
         <div class="hidden-box">
           <p>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil
