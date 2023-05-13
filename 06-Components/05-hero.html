@@ -38,6 +38,13 @@
         vw: viewport width */
 
         position: relative;
+
+        background-image: linear-gradient(rgba(19, 17, 17, 0.6), rgba(19, 17, 17, 0.6)),
+          url(hero.jpg);
+        /* this will create a stack where linear-gradient is on top of the url image */
+        background-size: cover;
+        /* cover here will automatically figure out the exact size that the image needs to be to cover the entire element */
+        color: white;
       }
 
       nav {
@@ -46,6 +53,13 @@
         display: flex;
         justify-content: space-between;
         /* background-color: green; */
+
+        /* background-image: linear-gradient(to right, red, blue); */
+
+        /* margin-top: 32px; */
+        /* this won't work because it will create the empty white space on the top of the viewport so instead: */
+
+        padding-top: 32px;
       }
 
       .header-container {
@@ -71,10 +85,10 @@
       }
 
       .btn:link,
-      btn:visited {
+      .btn:visited {
         font-size: 20px;
         font-weight: 600;
-        /* background-color: #e67e22; */
+        background-color: #e67e22;
         color: white;
         text-decoration: none;
         display: inline-block;
@@ -92,7 +106,7 @@
         background-color: #f7f7f7;
       }
 
-      .header-container-inner{
+      .header-container-inner {
         width: 50%;
         /* in relation to header-container parent element */
         /* background-color: aqua; */
