@@ -43,3 +43,20 @@ body {
   font-weight: 400;
   color: #555;
 }
+
+.test {
+  /* width: 1000px; */
+/* here browser is generating scroll bars when when the viewport gets smaller than the width of test element however, let's say that we don't want that to happen and istead the behavior that we want to see is that when there's no more additional space to fit these 1000px then the element should  simply have the width of the parent container:  */
+/* max-width: 1000px; */
+
+/* REM
+default size: 16px */
+max-width: 50rem; 
+/* 50*16px= 800px
+the power of rem is that we only need to define the font-size on the html element and then at all places the rem is used is going to calculate the sizes of element relative to the font-size that we specified */
+color: white;
+font-size: 2rem;
+
+  background-color: red;
+  padding: 100px;
+}
