@@ -16,8 +16,8 @@ Default: 1
 
 - Primary: #e67e22
 
-- Tints(darker version):
-- Shaded(lighter version): #fdf2e9
+- Tints(lighter version):#fdf2e9
+- Shaded(darker version): #cf711f
 - Accents:
 - Greys: #555 #333
 
@@ -42,7 +42,7 @@ html {
 }
 
 body {
-  font-family: sans-serif;
+  font-family: "rubik", sans-serif;
   line-height: 1;
   font-weight: 400;
   color: #555;
@@ -92,6 +92,8 @@ body {
   /* all means, transitioning all the properties and the 3rd value for type of animation*/
   /* now it will nicely change the color in 1s */
   /* and remember put transition always on the original state */
+
+  font-weight: 600;
 }
 
 .btn--full:link,
@@ -102,9 +104,10 @@ body {
   /* ofcourse we could give a gap between using above property between the buttons but if we added this buttom somewhere else then it would also going to get margin-right of 1.6rem so to fix this we can use flex but that's a bit too much so instead we are going to add a special helper class to this element:  */
 }
 
-.margin--right-sm{
+.margin--right-sm {
   margin-right: 1.6rem !important;
 }
+/* many times we want to use margins in multiple palces but we do not want to add to specific elements */
 
 .btn--full:hover,
 .btn--full:active {
@@ -131,4 +134,37 @@ body {
 
 .hero-img {
   width: 100%;
+}
+
+.delivered-meals{
+  display: flex;
+  margin-top: 8rem;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.delivered-imgs {
+  display: flex;
+}
+
+.delivered-imgs img{
+height: 4.8rem;
+width: 4.8rem;
+border-radius: 50%;
+margin-right: -1.6rem;
+border: 3px solid #fdf2e9;
+}
+
+.delivered-imgs img:last-child{
+  margin: 0;
+}
+
+.delivered-text{
+   font-size: 1.8rem;
+   font-weight: 600;
+}
+
+.delivered-text span{
+  color: #cf711f;
+  font-weight: 700;
 }
