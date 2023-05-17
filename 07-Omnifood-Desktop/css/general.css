@@ -139,7 +139,8 @@ body {
   border-radius: 0.9rem;
 
   /* adding animation: while we hover */
-  transition: background-color 0.3s;
+  /* transition: background-color 0.3s; */
+  transition: all 0.3s;
   /* all means, transitioning all the properties and the 3rd value for type of animation*/
   /* now it will nicely change the color in 1s */
   /* and remember put transition always on the original state */
