@@ -566,22 +566,38 @@
               </p>
 
               <form class="cta-form" action="#">
-                <label for="full-name">Full Name</label>
-                <input type="text" id="full-name" placeholder="John Smith" />
+                <div>
+                  <label for="full-name">Full Name</label>
+                  <input
+                    type="text"
+                    id="full-name"
+                    placeholder="John Smith"
+                    required
+                  />
+                </div>
 
-                <label for="email">Email Address</label>
-                <input type="email" id="email" placeholder="me@example.com" />
+                <div>
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    placeholder="me@example.com"
+                    required
+                  />
+                </div>
 
-                <label for="sleect-where">Where did you hear from us?</label>
+                <div>
+                  <label for="select-where">Where did you hear from us?</label>
 
-                <select id="select-where">
-                  <option value="">Please choose on e option:</option>
-                  <option value="friends">Friends and family </option>
-                  <option value="youtube">YouTube video </option>
-                  <option value="podcast">Podcast </option>
-                  <option value="ad">Facebook ad</option>
-                  <option value="others">Others </option>
-                </select>
+                  <select id="select-where" required>
+                    <option value="">Please choose on e option:</option>
+                    <option value="friends">Friends and family</option>
+                    <option value="youtube">YouTube video</option>
+                    <option value="podcast">Podcast</option>
+                    <option value="ad">Facebook ad</option>
+                    <option value="others">Others</option>
+                  </select>
+                </div>
 
                 <button class="btn">Sign up now</button>
               </form>
