@@ -184,7 +184,8 @@ body {
   /* so with the inset keyword the shadow will basically be added to the inside of the element   */
 }
 
-.link:link, .link:visited{
+.link:link,
+.link:visited {
   display: inline-block;
   color: #e67e22;
   text-decoration: none;
@@ -196,12 +197,33 @@ body {
   transition: all 0.3s;
 }
 
-.link:hover, .link:active{
+.link:hover,
+.link:active {
   color: #cf711f;
   /* and note how the border color also gets changed and that is because of the currentColor trick */
 
   /* to remove border-bottom when we hover to the link we cannot use border-bottom set to none because that will also remove the 2px from the element and it will shake the screen so to remove it: */
   border-bottom: 1px solid transparent;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.list-item {
+  font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
 }
 
 /* HELPER/SETTINGS CLASSES   */
@@ -210,10 +232,28 @@ body {
   margin-bottom: 4.84rem !important;
 }
 
-.center-text{
+.center-text {
   text-align: center;
 }
 
-strong{
+strong {
   font-weight: 500;
+}
+
+.plan-header {
+  text-align: center;
+  margin-bottom: 4.8rem;
+}
+
+.plan-name {
+  color: #cf711f;
+  font-weight: 600;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.plan-price {
+}
+
+.plan-text {
 }
