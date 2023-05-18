@@ -498,7 +498,7 @@
 /* ********************************** */
 
 .section-cta {
-  padding: 9.6rem 0;
+  padding: 4.8rem 0 12.8rem 0;
 }
 
 .cta {
@@ -593,10 +593,18 @@
 /* ********************************** */
 
 .footer {
-  padding: 9.6rem 0;
+  padding: 12.8rem 0;
+  border-top: 1px solid #eee;
 }
 
-.logo-col
+.grid--footer{
+  grid-template-columns: 1.5fr 1.5fr 1fr 1fr 1fr;
+}
+
+.logo-column {
+  display: flex;
+  flex-direction: column;
+}
 
 .footer-logo {
   display: block;
@@ -614,10 +622,23 @@
   width: 2.4rem;
 }
 
-.copyright{
+.copyright {
   font-size: 1.4rem;
   line-height: 1.6;
   columns: #767676;
+
+  margin-top: auto;
+  /* it will basically push the copyright paragraph to the end of the footer because it's parent is the flex-container */
+}
+
+.contacts{
+  font-style: normal;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.address{
+  margin-bottom: 2.4rem;
 }
 
 .footer-heading {
