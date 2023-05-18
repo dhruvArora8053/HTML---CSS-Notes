@@ -76,6 +76,16 @@ body {
   display: grid;
   row-gap: 9.6rem;
   column-gap: 6.4rem;
+
+  /* margin-bottom: 9.6rem; */
+}
+
+/* .grid:last-child{
+  margin-bottom: 0;
+} */
+
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
 }
 
 .grid--2-cols {
@@ -84,6 +94,10 @@ body {
 
 .grid--3-cols {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .grid--center-v {
@@ -238,22 +252,4 @@ body {
 
 strong {
   font-weight: 500;
-}
-
-.plan-header {
-  text-align: center;
-  margin-bottom: 4.8rem;
-}
-
-.plan-name {
-  color: #cf711f;
-  font-weight: 600;
-  font-size: 1.8rem;
-  text-transform: uppercase;
-}
-
-.plan-price {
-}
-
-.plan-text {
 }
