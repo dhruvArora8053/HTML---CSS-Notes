@@ -509,6 +509,7 @@
   border-radius: 1.1rem;
 
   background-image: linear-gradient(to right bottom, #eb8943, #e67e22);
+  overflow: hidden;
 
   /* temp */
   height: 50rem;
