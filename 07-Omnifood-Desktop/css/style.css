@@ -512,7 +512,7 @@
   overflow: hidden;
 
   /* temp */
-  height: 50rem;
+  /* height: 50rem; */
 }
 
 .cta-text-box {
@@ -561,13 +561,15 @@
   margin-bottom: 1.2rem;
 }
 
-.cta-form input {
+.cta-form input,
+.cta-form select {
   width: 100%;
   padding: 1.2rem;
   font-size: 1.8rem;
 
   /* these form elements do not inherit the font-family that we defined but we can actually force them to inherit it */
   font-family: inherit;
+  color: inherit;
 
   border: none;
   background-color: #fdf2e9;
@@ -576,13 +578,12 @@
 }
 
 /* new pseudo element */
-.cta-form input::placeholder{
+.cta-form input::placeholder {
   /* and pseduo elements are the elements which we can style but actually they do not exist on the page */
   color: #aaa;
 }
 
-.cta-form select {
-}
-
-.cta-form button {
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem rgba(253, 242, 233, 0.5);
 }
