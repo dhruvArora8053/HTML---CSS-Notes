@@ -1,0 +1,11 @@
+/* rem and em do not depend upon html font-size in media queries. Instead we assume that 1rem = 1em = 16px */
+/* rem apparently has some bugs in some browsers when used in media queries and therefore we should not use rem in media queries but em */
+
+/***********************************************/
+/* BELOW 84*16= 1344px (Smaller desktops) */
+/***********************************************/
+
+/* 1350/16=84em */
+@media (max-width:84em ){
+    
+}
