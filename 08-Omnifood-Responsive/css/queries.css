@@ -230,19 +230,44 @@
   } */
   /* the problem with this is that we want to center the logo and the Contact us part */
 
-  .grid--footer{
+  .grid--footer {
     grid-template-columns: repeat(6, 1fr);
   }
 
-  
-  .nav-col{
+  .nav-col {
     grid-row: 1;
     grid-column: span 2;
     margin-bottom: 3.2rem;
   }
 
-  .logo-col, .address-col{
+  .logo-col,
+  .address-col {
     grid-column: span 3;
   }
+}
 
+/***********************************************/
+/* BELOW 34*16= 544px (Phones) */
+/***********************************************/
+
+@media (max-width: 34em) {
+  .grid--2-cols,
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: 1fr;
+  }
+
+  .btn,
+  .btn:link,
+  .btn:visited {
+    padding: 2.4rem 1.6rem;
+  }
+
+  .section-hero {
+    padding: 2.4rem 0 6.4rem 0;
+  }
+
+  .hero {
+    padding: 3.2rem;
+  }
 }
