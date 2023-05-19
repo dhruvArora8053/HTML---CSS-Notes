@@ -174,7 +174,7 @@
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
-    transform: translateX(0); 
+    transform: translateX(0);
   }
   /* so if nav-open class is not on the page then the mobile nav style will not be applied */
 
@@ -195,5 +195,29 @@
   .main-nav-link:link,
   .main-nav-link:visited {
     font-size: 3rem;
+  }
+}
+
+/***********************************************/
+/* BELOW 44*16= 704px (Smaller Tablets) */
+/***********************************************/
+
+@media (max-width: 44em) {
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diets {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
+
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+
+  .princing-plan {
+    width: 100%;
   }
 }
