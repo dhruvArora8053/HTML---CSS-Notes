@@ -6,16 +6,42 @@
 /***********************************************/
 
 /* 1350/16=84em */
-@media (max-width:84em ){
-    .hero{
-        max-width: 120rem;
+@media (max-width: 84em) {
+  .hero {
+    max-width: 120rem;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/***********************************************/
+/* BELOW 75*16= 1200px (Landscape Tablets) */
+/***********************************************/
+
+/* 1200/16= 75*/
+@media (max-width: 75em) {
+    /* if we want to change the font-size of every text element, we can simply change the font-size of html tag and that's why we used rem at all the palces  */
+    html{
+        /* 9px/16px= 56.25% */
+        font-size: 56.25%;
     }
 
-    .heading-primary{
-        font-size: 4.4rem;
+    .grid{
+        column-gap: 4.8rem;
+        row-gap: 6.4rem;
     }
 
-    .gallery{
-        grid-template-columns: repeat(2,1fr);
+    .heading-secondary{
+        font-size: 3.6rem;
+    }
+
+    .heading-tertiary{
+        font-size: 2.4rem;
     }
 }
