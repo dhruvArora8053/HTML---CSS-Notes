@@ -270,4 +270,49 @@
   .hero {
     padding: 3.2rem;
   }
+
+  .hero-img {
+    width: 80%;
+  }
+
+  .logos img {
+    height: 1.2rem;
+  }
+
+  .step-img-box:nth-child(2) {
+    /* this 2 number above does refer to the number of children of the container grid element and not of the number of the children that has .step-img-box class but we still need to select by this way */
+    grid-row: 1;
+  }
+
+  .step-img-box:nth-child(6) {
+    grid-row: 5;
+  }
+
+  .step-img-box{
+    transform: translateY(2.4rem);
+  }
+
+  .testimonials{
+    grid-template-columns: 1fr;
+  }
+
+  .gallery{
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+  }
+
+  .cta{
+    grid-template-columns: 1fr;
+  }
+    /* now the image is not visible because it was adjusted relative to the postion of the grid which has a lot of content */
+
+.cta-text-box{
+    padding: 3.2rem;
+}
+
+  .cta-img-box{
+    height: 32rem;
+    grid-row: 1;
+  }
+
 }
