@@ -11,6 +11,8 @@
   /* Because we want header to be sticky later */
   height: 9.6rem;
   padding: 0 4.8rem;
+
+  position: relative;
 }
 
 .logo {
@@ -57,22 +59,22 @@
 }
 
 /* MOBILE */
-.btn-mobile-nav{
-border: none;
-background: none;
-cursor: pointer;
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
 
-display: none;
+  display: none;
 }
 
-.icon-mobile-nav{
-height: 4.8rem;
-width: 4.8rem;
-color: #333;
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: #333;
 }
 
 /* note this: */
-.icon-mobile-nav[name="close-outline"]{
+.icon-mobile-nav[name="close-outline"] {
   display: none;
 }
 
@@ -107,8 +109,6 @@ color: #333;
     background-color: orangered;
   }
 } */
-
-
 
 .hero {
   max-width: 130rem;
