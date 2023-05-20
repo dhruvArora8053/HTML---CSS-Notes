@@ -140,3 +140,5 @@ const obs = new IntersectionObserver(
   }
 );
 obs.observe(sectionHeroEl);
+//////////////////////////////////////////////////
+//implementing metadata and facicon on html
