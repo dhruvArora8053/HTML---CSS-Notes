@@ -77,9 +77,10 @@
 }
 
 /* STICKY NAVIGATION */
-.sticky{
+.sticky .header {
   position: fixed;
-/* just like position: absolute now the header element is like not on the page that' s why above nav space is getting filled by the hero section */
+  /* just like position: absolute now the header element is like not on the page that' s why above nav space is getting filled by the hero section */
+  /* so to compensate that height collapse we will be needing to add extram margin-top on hero above hero section  */
 
   top: 0;
   bottom: 0;
@@ -91,6 +92,11 @@
   z-index: 999;
   box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
 }
+
+.sticky .section-hero {
+  margin-top: 9.6rem;
+}
+/* we want this height when the sticky class is added so to do that we will be needing to add this sticky class to both of there parent element which is the body */
 
 /**************************/
 /* HERO SECTION */
