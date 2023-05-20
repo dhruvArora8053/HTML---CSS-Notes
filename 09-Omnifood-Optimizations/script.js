@@ -101,11 +101,17 @@ allLinks.forEach(function (link) {
       });
     }
 
+    // Scroll to other links
     if (href !== "#" && href.startsWith("#")) {
       const sectionEl = document.querySelector(href);
       sectionEl.scrollIntoView({
         behavior: "smooth",
       });
+    }
+
+    // Close mobile navigation
+    if (link.classList.contains("main-nav-link")) {
+      headerEl.console.log().toggle("nav-open");
     }
   });
 });
