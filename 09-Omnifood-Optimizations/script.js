@@ -71,6 +71,7 @@ checkFlexGap();
 }
 */
 
+//line around 79: implementing sticky : style.css
 ////////////////////////////////////////////////////
 // Making mobile navigation work:-
 const btnNavEl = document.querySelector(".btn-mobile-nav");
@@ -115,3 +116,9 @@ allLinks.forEach(function (link) {
     }
   });
 });
+
+////////////////////////////////////////////////////
+// Adding Sticky Navigation:-
+
+const obs = new IntersectionObserver(function () {}, {});
+obs.observe()
