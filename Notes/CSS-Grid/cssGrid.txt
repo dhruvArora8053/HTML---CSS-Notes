@@ -5,6 +5,7 @@ CSS-Grid:
 display: grid;
 grid-template-columns: 250px 250px 1fr 1fr;
 grid-template-columns: 3fr 1fr 1fr 1fr;
+grid-template-columns: 3fr 1fr auto auto;
 grid-template-columns: repeat(4, 1fr);
 
 note: elements will stretch their heights and widths relative to the tallest and widest element and the element which has the defined height and width will not stretch
